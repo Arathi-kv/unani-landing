@@ -125,9 +125,18 @@ h1 {
 @media (max-width: 480px){
 
   body {
-    padding: 16px; /* creates side spacing */
-    height: auto;  /* prevents vertical cut */
+    padding: 16px;
+
+    /* 🔥 FIX MAIN ISSUE */
+    height: auto;              /* remove fixed height */
+    min-height: 100vh;         /* allow full height */
+
+    display: flex;
+    align-items: center;       /* vertical center */
+    justify-content: center;
   }
+
+
 
   .card {
     width: 92%;           /* key fix: not full width */
@@ -140,7 +149,7 @@ h1 {
 
   /* LOGO FIX */
   .logo {
-    width: 160px;   /* was 350px → too big */
+    width: 180px;   /* was 350px → too big */
     max-width: 100%;
     margin-bottom: 15px;
   }

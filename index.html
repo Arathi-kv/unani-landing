@@ -121,9 +121,51 @@ h1 {
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* mobile */
-@media(max-width:768px){
-  h1 { font-size: 2.5rem; }
+/* ================= MOBILE FIX ================= */
+@media (max-width: 480px){
+
+  body {
+    padding: 16px; /* creates side spacing */
+    height: auto;  /* prevents vertical cut */
+  }
+
+  .card {
+    width: 92%;           /* key fix: not full width */
+    max-width: 360px;     /* keeps proper size */
+    margin: auto;
+    padding: 30px 18px;
+
+    animation: none;      /* remove animation on mobile */
+  }
+
+  /* LOGO FIX */
+  .logo {
+    width: 160px;   /* was 350px → too big */
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* TEXT ADJUST */
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 11px;
+  }
+
+  .line {
+    width: 80px;
+  }
 }
 </style>
 </head>

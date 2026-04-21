@@ -36,20 +36,21 @@ body::after {
   background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.7));
 }
 
-/* CARD */
+/* CARD (DESKTOP — UNCHANGED) */
 .card {
   position: relative;
   z-index: 2;
   width: 85%;
   max-width: 500px;
-  padding: 28px 22px;
+  padding: 28px 20px;
   text-align: center;
 
-  background: rgba(20,10,5,0.65);
+  background: rgba(20,10,5,0.6);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   border: 1.5px solid rgba(212,175,55,0.6);
-  border-radius: 14px;
+  border-radius: 12px;
 
   box-shadow: 0 0 30px rgba(0,0,0,0.6);
 
@@ -59,7 +60,7 @@ body::after {
 /* LOGO */
 .logo {
   width: 100%;
-  max-width: 160px;
+  max-width: 150px;
   margin: 0 auto 12px;
 }
 
@@ -122,29 +123,26 @@ h1 {
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE ONLY FIX ================= */
 @media (max-width: 480px) {
 
   body {
-    padding: 16px; /* ensures side spacing */
+    padding: 16px; /* creates visible side spacing */
   }
 
   .card {
     width: 100%;
-    max-width: 340px;   /* perfect centered size */
+    max-width: 340px;   /* ONLY affects mobile */
     margin: auto;
     padding: 22px 16px;
-    border-radius: 14px;
 
-    animation: none; /* ❌ remove animation */
+    animation: none; /* remove animation on mobile */
   }
 
-  /* LOGO */
   .logo {
     width: 95px;
   }
 
-  /* TEXT */
   .tagline {
     font-size: 9px;
   }

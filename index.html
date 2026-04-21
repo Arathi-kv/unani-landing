@@ -8,18 +8,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-body {
+
+/* RESET */
+* {
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   background: url('bg.png') no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   position: relative;
 }
 
-/* dark vignette */
+/* DARK OVERLAY */
 body::after {
   content: "";
   position: absolute;
@@ -27,104 +36,128 @@ body::after {
   background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.7));
 }
 
-/* GLASS CARD */
+/* CARD (DESKTOP) */
 .card {
   position: relative;
   z-index: 2;
-  width: 90%;
-  max-width: 700px;
-  padding: 50px 30px;
+  width: 85%;
+  max-width: 500px;
+  padding: 28px 22px;
   text-align: center;
 
-  /* glass + blur */
-  background: rgba(20,10,5,0.55);
+  background: rgba(20,10,5,0.65);
   backdrop-filter: blur(10px);
 
-  /* GOLD BORDER */
-  border: 1px solid rgba(212,175,55,0.4);
-  border-radius: 12px;
+  border: 1.5px solid rgba(212,175,55,0.6);
+  border-radius: 14px;
 
-  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
 /* LOGO */
 .logo {
-  width: 350px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 160px;
+  margin: 0 auto 12px;
 }
 
-/* TOP TAGLINE */
+/* TAGLINE */
 .tagline {
   color: #d4af37;
-  font-size: 13px;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-/* MAIN TITLE */
+/* TITLE */
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.8rem;
-  margin: 10px 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 8px 0;
 
   background: linear-gradient(to right, #d4af37, #f5e3a1);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-/* DECORATIVE LINE */
+/* LINE */
 .line {
-  width: 120px;
+  width: 80px;
   height: 2px;
   background: linear-gradient(to right, transparent, #d4af37, transparent);
-  margin: 20px auto;
+  margin: 12px auto;
 }
 
 /* SUBTEXT */
 .subtitle {
   color: #f5e9c9;
-  font-size: 1rem;
-  margin-bottom: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
 }
 
-/* CTA BUTTON */
+/* BUTTON */
 .btn {
-  padding: 12px 30px;
+  padding: 8px 20px;
   border-radius: 30px;
   border: 1px solid #d4af37;
   color: #d4af37;
   text-decoration: none;
-  transition: 0.3s;
+  font-size: 12px;
 }
 
-.btn:hover {
-  background: #d4af37;
-  color: black;
-  box-shadow: 0 0 25px rgba(212,175,55,0.7);
-}
-
-/* FOOTER INFO */
+/* FOOTER */
 .footer {
-  margin-top: 30px;
-  font-size: 13px;
+  margin-top: 15px;
+  font-size: 10px;
   color: #c9b37a;
-  line-height: 1.6;
 }
 
-/* subtle animation */
-.card {
-  animation: fadeUp 1.5s ease;
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+
+  body {
+    padding: 16px; /* 🔥 side spacing */
+  }
+
+  .card {
+    width: 100%;
+    max-width: 340px; /* 🔥 EXACT width like your screenshot */
+    margin: auto;
+    padding: 22px 16px;
+    border-radius: 14px;
+  }
+
+  .logo {
+    width: 95px;
+  }
+
+  .tagline {
+    font-size: 9px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .line {
+    width: 60px;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 11px;
+    padding: 7px 16px;
+  }
+
+  .footer {
+    font-size: 9px;
+  }
 }
 
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(40px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* mobile */
-@media(max-width:768px){
-  h1 { font-size: 2.5rem; }
-}
 </style>
 </head>
 

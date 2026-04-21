@@ -121,47 +121,42 @@ h1 {
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* ================= MOBILE FIX ================= */
+/* ================= MOBILE SINGLE PAGE ================= */
 @media (max-width: 480px){
 
   body {
-    padding: 16px;
+    margin: 0;
+    padding: 12px;
 
-    /* 🔥 FIX MAIN ISSUE */
-    height: auto;              /* remove fixed height */
-    min-height: 100vh;         /* allow full height */
+    height: 100vh;        /* full screen */
+    overflow: hidden;     /* ❌ no scroll */
 
     display: flex;
-    align-items: center;       /* vertical center */
     justify-content: center;
+    align-items: center;
   }
-
-
 
   .card {
-    width: 92%;           /* key fix: not full width */
-    max-width: 360px;     /* keeps proper size */
-    margin: auto;
-    padding: 30px 18px;
+    width: 92%;
+    max-width: 360px;
 
-    animation: none;      /* remove animation on mobile */
+    padding: 28px 18px;
+
+    animation: none; /* remove animation */
   }
 
-  /* LOGO FIX */
+  /* LOGO */
   .logo {
-    width: 180px;   /* was 350px → too big */
-    max-width: 100%;
-    margin-bottom: 15px;
+    width: 140px;
   }
 
-  /* TEXT ADJUST */
+  /* TEXT */
   h1 {
     font-size: 2rem;
   }
 
   .tagline {
-    font-size: 11px;
-    letter-spacing: 2px;
+    font-size: 10px;
   }
 
   .subtitle {

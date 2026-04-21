@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unani Wellness Clinic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: url('bg.png') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* dark vignette */
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.7));
+}
+
+/* GLASS CARD */
+.card {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 700px;
+  padding: 50px 30px;
+  text-align: center;
+
+  /* glass + blur */
+  background: rgba(20,10,5,0.55);
+  backdrop-filter: blur(10px);
+
+  /* GOLD BORDER */
+  border: 1px solid rgba(212,175,55,0.4);
+  border-radius: 12px;
+
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* LOGO */
+.logo {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+/* TOP TAGLINE */
+.tagline {
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+/* MAIN TITLE */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  margin: 10px 0;
+
+  background: linear-gradient(to right, #d4af37, #f5e3a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DECORATIVE LINE */
+.line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+  margin: 20px auto;
+}
+
+/* SUBTEXT */
+.subtitle {
+  color: #f5e9c9;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* CTA BUTTON */
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d4af37;
+  color: black;
+  box-shadow: 0 0 25px rgba(212,175,55,0.7);
+}
+
+/* FOOTER INFO */
+.footer {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #c9b37a;
+  line-height: 1.6;
+}
+
+/* subtle animation */
+.card {
+  animation: fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* mobile */
+@media(max-width:768px){
+  h1 { font-size: 2.5rem; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <img src="logo.png" class="logo">
+
+  <div class="tagline">THE HEALING TOUCH OF HOLISTIC UNANI</div>
+
+  <h1>COMING SOON</h1>
+
+  <div class="line"></div>
+
+  <div class="subtitle">
+    A refined journey into natural healing and holistic wellness
+  </div>
+
+  <a href="#" class="btn">Stay Tuned</a>
+
+  <div class="footer">
+    Bliss Gx, Station Road, Gerrards Cross, SL9 8EL <br>
+    📞 07570 086987 <br>
+    ✉ doctor@unani.uk
+  </div>
+
+</div>
+
+</body>
+</html>

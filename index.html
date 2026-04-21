@@ -121,15 +121,14 @@ h1 {
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* ================= MOBILE SINGLE PAGE ================= */
+/* ================= PERFECT MOBILE SINGLE SCREEN ================= */
 @media (max-width: 480px){
 
   body {
     margin: 0;
-    padding: 12px;
+    padding: 10px;
 
-    height: 100vh;        /* full screen */
-    overflow: hidden;     /* ❌ no scroll */
+    height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -140,35 +139,50 @@ h1 {
     width: 92%;
     max-width: 360px;
 
-    padding: 32px 18px;
+    /* 🔥 KEY FIX */
+    max-height: 95vh;     /* fit inside screen */
+    overflow: hidden;     /* prevent overflow */
 
-    animation: none; /* remove animation */
+    padding: 22px 16px;
+
+    animation: none;
   }
 
   /* LOGO */
   .logo {
-    width: 250px;
+    width: 250px;   /* reduced */
+    margin-bottom: 10px;
   }
 
-  /* TEXT */
-  h1 {
-    font-size: 2rem;
-  }
-
+  /* TEXT SCALE DOWN */
   .tagline {
     font-size: 10px;
+    letter-spacing: 1.5px;
   }
 
-  .subtitle {
-    font-size: 0.9rem;
-  }
-
-  .footer {
-    font-size: 11px;
+  h1 {
+    font-size: 1.8rem;
+    margin: 6px 0;
   }
 
   .line {
-    width: 80px;
+    width: 60px;
+    margin: 10px auto;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+
+  .footer {
+    font-size: 10px;
+    line-height: 1.4;
   }
 }
 </style>
